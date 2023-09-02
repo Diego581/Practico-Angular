@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { MovimientosComponent } from './movimientos/movimientos.component';
 
 const routes: Routes = [
-  {path: 'inicio', component: CategoriasComponent},
   {path: 'categorias', component: CategoriasComponent},
-  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
+  {path: 'movimientos', component: MovimientosComponent},
+  {path: '', redirectTo: '/movimientos', pathMatch: 'full'},
 ];
 
 @NgModule({

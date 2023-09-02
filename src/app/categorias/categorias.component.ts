@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorias } from '../categorias';
-
 import { CategoriasService } from '../categorias.service';
 
 
@@ -11,6 +10,7 @@ import { CategoriasService } from '../categorias.service';
 })
 export class CategoriasComponent implements OnInit{
   categorias: Categorias[] = [];
+
 
   constructor(private categoriasService: CategoriasService) { }
 
