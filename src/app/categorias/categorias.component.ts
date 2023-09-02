@@ -27,8 +27,8 @@ export class CategoriasComponent implements OnInit{
     nombre = nombre.trim();
     if (!nombre) { return; }
     this.categoriasService.aniadirCategoria({ nombre } as Categorias)
-      .subscribe(hero => {
-        this.categorias.push(hero);
+      .subscribe(categoria => {
+        this.categorias.push(categoria);
       });
   }
   

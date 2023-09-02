@@ -1,4 +1,15 @@
 <h2>Mis Categorias</h2>
+<div>
+    <label for="nueva-categorias">Nombre de Categoria: </label>
+    <input id="nueva-categorias" #categoriaNombre />
+    <button type="button" class="aniadir" (click)="aniadir(categoriaNombre.value); categoriaNombre.value=''">
+        Agregar categoria
+    </button>
+</div>
 <li *ngFor="let categorias of categorias">
-    <span class="badge">{{categorias.nombre}}</span> 
+    <span class="badge">{{categorias.nombre}}</span>
+    <button type="button" class="borrar" title="borrar categorias"
+      (click)="borrar(categorias)">x</button>
+
+      
 </li>
