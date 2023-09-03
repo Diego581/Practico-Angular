@@ -28,7 +28,7 @@ export class MovimientosService {
 
   aniadirMovimientos(movimiento: Movimiento): Observable<Movimiento> {
     return this.http.post<Movimiento>(this.movimientosUrl, movimiento, this.httpOptions).pipe(
-      catchError(this.handleError<Movimiento>('anadir categoria')))
+      catchError(this.handleError<Movimiento>('anadir movimiento')))
   }
 
   // Sacado de Tour of Heroes
@@ -46,6 +46,6 @@ export class MovimientosService {
     };
   }
   private log(message: string) {
-    this.logService.log(`categoriasService: ${message}`);
+    this.logService.log(`movimientosService: ${message}`);
   }
 }
