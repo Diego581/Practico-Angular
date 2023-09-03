@@ -3,6 +3,6 @@ export interface Movimiento {
     nombre: string;
     detalle: string;
     precio: string;
-    categoria: number;
+    categoria: string;
     fecha: string; 
 }

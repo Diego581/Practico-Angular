@@ -9,6 +9,7 @@ import { MovimientosComponent } from './movimientos/movimientos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { BuscarPorCategoriaComponent } from './buscar-por-categoria/buscar-por-categoria.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { InMemoryDataService } from './in-memory-data.service';
   declarations: [
     AppComponent,
     CategoriasComponent,
-    MovimientosComponent
+    MovimientosComponent,
+    BuscarPorCategoriaComponent
   ],
   bootstrap: [AppComponent]
 })

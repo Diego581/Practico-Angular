@@ -22,5 +22,5 @@ export class MovimientosComponent implements OnInit {
     this.movimientoService.leerMovimientos()
     .subscribe(movimiento => this.movimiento = movimiento);
   }
-
+  
 }

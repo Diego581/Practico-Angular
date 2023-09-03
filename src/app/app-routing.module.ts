@@ -6,6 +6,7 @@ import { MovimientosComponent } from './movimientos/movimientos.component';
 const routes: Routes = [
   {path: 'categorias', component: CategoriasComponent},
   {path: 'movimientos', component: MovimientosComponent},
+  {path: 'movimiento/:id', component: CategoriasComponent},
   {path: '', redirectTo: '/movimientos', pathMatch: 'full'},
 ];
 

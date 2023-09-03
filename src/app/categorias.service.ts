@@ -38,6 +38,7 @@ export class CategoriasService {
       catchError(this.handleError<Categorias>('borrar categoria'))
     );
   }
+  
 
 
   // Sacado de Tour of Heroes

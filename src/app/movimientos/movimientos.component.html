@@ -1,6 +1,7 @@
 <p>movimientos works!</p>
 <div>
     <li *ngFor="let movimiento of movimiento">
-        <span class="badge">{{movimiento.precio}}, {{movimiento.nombre}}, Detalle: {{movimiento.detalle}}</span>
+        <span class="badge">{{movimiento.precio}}, {{movimiento.nombre}}, Detalle: {{movimiento.detalle}} {{movimiento.categoria}}</span>
     </li>
 </div>
+<app-buscar-por-categoria></app-buscar-por-categoria>
