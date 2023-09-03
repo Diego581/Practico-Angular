@@ -1,4 +1,6 @@
 <p>movimientos works!</p>
-<li *ngFor="let movimientos of movimiento">
-    <span class="badge">{{movimientos}}</span>
-</li>
+<div>
+    <li *ngFor="let movimiento of movimiento">
+        <span class="badge">{{movimiento.nombre}}</span>
+    </li>
+</div>
