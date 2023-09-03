@@ -4,5 +4,5 @@ export interface Movimiento {
     detalle: string;
     precio: string;
     categoria: number;
-    fecha: Date; 
+    fecha: string; 
 }

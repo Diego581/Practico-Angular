@@ -1,3 +1,4 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Categorias } from './categorias';
@@ -12,5 +13,10 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 2,  nombre: 'prestamos', descripcion: 'Ingreso de dinero por un prestamo'},
       {id: 3,  nombre: 'facturas', descripcion: 'Pago de facturas'},
       ];
-    return {categorias};
+    const movimiento = [
+      {id: 1,  nombre: 'Ingreso', detalle: 'Cobro de sueldo', precio:'$300000', categoria:'1', fecha : ''},
+      {id: 2,  nombre: 'Egreso', detalle: 'Pago de cuotas', precio:'$10', categoria:'3', fecha : ''},
+      {id: 3,  nombre: 'Ingreso', detalle: 'Venta', precio:'$20', categoria:'2', fecha : ''},
+    ] 
+    return {categorias, movimiento};
   }}
