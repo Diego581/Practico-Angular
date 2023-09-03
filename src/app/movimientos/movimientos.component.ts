@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Categorias } from '../categorias';
 import { Movimiento } from '../movimiento';
 import { MovimientosService } from '../movimientos.service';
 

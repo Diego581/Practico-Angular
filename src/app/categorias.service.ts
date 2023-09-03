@@ -45,10 +45,8 @@ export class CategoriasService {
   private handleError<T>(operation = 'operacion', result?: T) {
     return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
 
-      // TODO: better job of transforming error for user consumption
       this.log(`${operation} fallo: ${error.message}`);
 
       // Let the app keep running by returning an empty result.

@@ -1,13 +1,12 @@
-<p>buscar-por-categoria works!</p>
 <div id="search-component">
-    <label for="search-box">Hero Search</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-  
-    <ul class="search-result">
-      <li *ngFor="let movimiento of movimientos$ | async" >
-        <a routerLink="/movimiento/{{movimiento.id}}">
-          {{movimiento.categoria}}
-        </a>
-      </li>
-    </ul>
-  </div>
+  <label for="search-box">Buscar movimiento por categoria</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let movimiento of movimientos$ | async" >
+      <a routerLink="/movimiento/categorias/{{movimiento.categoria}}">
+        {{movimiento.categoria}}
+      </a>
+    </li>
+  </ul>
+</div>

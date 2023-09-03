@@ -27,6 +27,15 @@ export class MovimientosService {
     return this.http.get<Movimiento[]>(this.movimientosUrl)
   }
 
+  leerMovimientosPorCategoria(categoria: string): Observable<Movimiento[]>{
+    return this.http.get<Movimiento[]>(this.movimientosUrl).pipe(
+      map((movimientos: Movimiento[]) => {
+        // Filtrar los movimientos por categoría
+        return movimientos.filter(movimiento => movimiento.categoria === categoria);
+      })
+      );
+    }
+
   aniadirMovimientos(movimiento: Movimiento): Observable<Movimiento> {
     return this.http.post<Movimiento>(this.movimientosUrl, movimiento, this.httpOptions).pipe(
       catchError(this.handleError<Movimiento>('anadir movimiento')))
@@ -50,10 +59,8 @@ export class MovimientosService {
   private handleError<T>(operation = 'operacion', result?: T) {
     return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
 
-      // TODO: better job of transforming error for user consumption
       this.log(`${operation} fallo: ${error.message}`);
 
       // Let the app keep running by returning an empty result.
