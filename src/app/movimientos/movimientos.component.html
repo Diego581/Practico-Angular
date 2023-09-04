@@ -1,6 +1,11 @@
 <div>
     <li *ngFor="let movimiento of movimiento">
-        <span class="badge">{{movimiento.precio}}, {{movimiento.nombre}}, Detalle: {{movimiento.detalle}} {{movimiento.categoria}}</span>
+        <h3>Numero de movimiento: {{movimiento.id}}</h3>
+        <div class="bg-dark">- Nombre: {{movimiento.nombre}}</div>
+        <div class="bg-dark">- Detalle: {{movimiento.detalle}}</div>
+        <div class="bg-dark">- Cantidad: {{movimiento.precio}}</div>
+        <div class="bg-dark">- Categoria: {{movimiento.categoria}}</div>
+        <hr>
     </li>
 </div>
 <app-buscar-por-categoria></app-buscar-por-categoria>

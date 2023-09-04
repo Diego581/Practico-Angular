@@ -1,0 +1,11 @@
+li {
+    list-style-type: none;
+}
+div {
+    font-size: 20px;
+}
+
+.bg-dark{
+    background: #ff000000;
+    color: #fafafa
+}

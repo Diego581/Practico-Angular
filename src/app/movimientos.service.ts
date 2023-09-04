@@ -38,7 +38,7 @@ export class MovimientosService {
 
   aniadirMovimientos(movimiento: Movimiento): Observable<Movimiento> {
     return this.http.post<Movimiento>(this.movimientosUrl, movimiento, this.httpOptions).pipe(
-      catchError(this.handleError<Movimiento>('anadir movimiento')))
+      catchError(this.handleError<Movimiento>('añadir movimiento')))
   }
 
   searchCategoria(term: string): Observable<Movimiento[]> {

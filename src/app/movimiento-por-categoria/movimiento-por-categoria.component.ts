@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movimiento-por-categoria.component.css']
 })
 export class MovimientoPorCategoriaComponent {
+  categoria = this.route.snapshot.paramMap.get('categoria')!;
   movimiento: Movimiento[] = [];
 
 

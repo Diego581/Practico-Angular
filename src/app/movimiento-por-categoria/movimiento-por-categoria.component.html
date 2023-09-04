@@ -1,7 +1,7 @@
-<h2>Movimientos por categoria</h2>
+<h2>Movimientos por categoria: {{categoria | uppercase}}</h2>
 <div>
     <li *ngFor="let movimiento of movimiento">
-        <span class="badge">{{movimiento.precio}}, {{movimiento.nombre}}, Detalle: {{movimiento.detalle}} {{movimiento.categoria}}</span>
+        <span>Numero de movimiento: {{movimiento.id}}, {{movimiento.precio}}, {{movimiento.nombre}}, Detalle: {{movimiento.detalle}} {{movimiento.categoria}}</span>
     </li>
 </div>
 
